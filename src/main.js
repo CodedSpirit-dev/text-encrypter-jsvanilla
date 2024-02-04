@@ -2,8 +2,8 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable indent */
 
-function getInputValue(id) {
-    return document.getElementById(id).value;
+function getInputValue(id) { // Get the value of an input field by id
+    return document.getElementById(id).value; // Return the value of the input field
 }
 
 function processText(text, operation) {
