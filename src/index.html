@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Encriptador de texto</title>
+  <link rel="stylesheet" href="output.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Encriptador de texto</h1>
+    <img src="./img/logo.svg" alt="Logo Alura" />
+  </header>
+
+  <main>
+    <section>
+      <h2>Encripta tu texto</h2>
+      <form id="form">
+        <div class="form-group">
+          <textarea id="textWithoutEncrypt" name="text" rows="5" required placeholder="Escribe lo que quieres encriptar"></textarea>
+        </div>
+        <button type="submit">Encriptar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Texto encriptado</h2>
+      <div id="result" class="result"></div>
+    </section>
+  </main>
+
+
+<script src="main.js"></script>
+
+</html>

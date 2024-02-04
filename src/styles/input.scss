@@ -1,0 +1,37 @@
+// Styles for h2 element
+h2 {
+    font-family: 'Baloo Chettan 2', sans-serif;
+}
+
+// Styles for h3 element
+h3 {
+    font-family: 'Baloo Chettan 2', sans-serif;
+}
+
+// Styles for h1 element
+h1 {
+    font-family: 'Baloo Chettan 2', sans-serif;
+}
+
+// Media query for mobile devices
+@media only screen and (max-width: 767px) {
+    // Your styles for mobile devices here
+}
+
+// Media query for tablets
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    // Your styles for tablets here
+}
+
+// Media query for small desktop screens
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    // Your styles for small desktop screens here
+}
+
+// Media query for large desktop screens
+@media only screen and (min-width: 1280px) {
+    // Your styles for large desktop screens here
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
