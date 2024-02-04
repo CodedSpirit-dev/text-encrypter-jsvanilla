@@ -16,28 +16,36 @@
 
 <body>
   <header>
-    <h1>Encriptador de texto</h1>
     <img src="./img/logo.svg" alt="Logo Alura" />
   </header>
 
   <main>
-    <section>
-      <h2>Encripta tu texto</h2>
-      <form id="form">
-        <div class="form-group">
-          <textarea id="textWithoutEncrypt" name="text" rows="5" required placeholder="Escribe lo que quieres encriptar"></textarea>
-        </div>
-        <button type="submit">Encriptar</button>
-      </form>
-    </section>
+    <div class="container">
+      <section class="encryptArea">
+        <form id="form">
+          <div class="form-group">
+            <textarea class="text_entry" id="textWithoutEncrypt" name="text" rows="5" required
+              placeholder="Ingrese el texto aqui"></textarea>
+          </div>
+          <div class="buttons">
+            <button id="encryptButton" class="encryptButton" type="submit">Encriptar</button>
+            <button id="decryptButton" class="unencryptButton" type="submit">Desencriptar</button>
+          </div>
+        </form>
+      </section>
 
-    <section>
-      <h2>Texto encriptado</h2>
-      <div id="result" class="result"></div>
-    </section>
+      <section class="unencryptArea">
+        <div id="result">
+          <img src="./img/dummy.png" alt="Icono de mensaje" id="messageIcon" />
+          <h2>Ningun mensaje fue encontrado</h2>
+          <p>Por favor, ingrese un mensaje para ser encriptado</p>
+        </div>
+        <button class="copyButton" id="copyButton">Copiar</button>
+      </section>
+    </div>
   </main>
 
 
-<script src="main.js"></script>
+  <script src="main.js"></script>
 
 </html>

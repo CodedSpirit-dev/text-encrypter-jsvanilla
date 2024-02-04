@@ -1,37 +1,129 @@
-// Styles for h2 element
-h2 {
-    font-family: 'Baloo Chettan 2', sans-serif;
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+// Color palette
+$DarkBlue100: #609ED4;
+$DarkBlue400: #0A3871;
+$DarkBlue500: #052051;
+
+$LightBlue100: #F3F5FC;
+$LightBlue200: #D8DFE8;
+$LightBlue400: #AAB2D5;
+
+// Global styles
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: $LightBlue100;
+    //Center 
 }
 
-// Styles for h3 element
-h3 {
-    font-family: 'Baloo Chettan 2', sans-serif;
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
 }
 
-// Styles for h1 element
-h1 {
-    font-family: 'Baloo Chettan 2', sans-serif;
+textarea {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: $DarkBlue400;
+    background-color: $LightBlue100;
+    border: none;
+    width: 100%;
+    height: 705px;
 }
 
-// Media query for mobile devices
+// Component styles
+.container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.unencryptButton, .encryptButton, .copyButton {
+    width: 328px;
+    height: 67px;
+    margin: 12px;
+    padding: 24px, 24px;
+    border-radius: 24px;
+    gap: 8px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.encryptArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 1024px;
+    padding: 24px;
+    margin: 12px;
+    border-radius: 24px;
+}
+
+.unencryptArea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 800px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background-color: white;
+    padding: 24px;
+    margin: 12px;
+    overflow: auto;
+    //Shadow
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .p{
+        font-size: 24px;
+        color: $DarkBlue400;
+    
+    }
+}
+
+.unencryptButton {
+    background-color: $LightBlue200;
+    color: $DarkBlue500;
+}
+
+.encryptButton {
+    background-color: $DarkBlue500;
+    color: white;
+}
+
+.copyButton {
+    background-color: $DarkBlue500;
+    color: white;
+    //Put the button at the bottom
+}
+
+// Media queries
 @media only screen and (max-width: 767px) {
-    // Your styles for mobile devices here
+    // Styles for mobile devices here
 }
 
-// Media query for tablets
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    // Your styles for tablets here
+    // Styles for tablets here
 }
 
-// Media query for small desktop screens
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-    // Your styles for small desktop screens here
+    // Styles for small desktop screens here
 }
 
-// Media query for large desktop screens
 @media only screen and (min-width: 1280px) {
-    // Your styles for large desktop screens here
+    // Styles for large desktop screens here
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');

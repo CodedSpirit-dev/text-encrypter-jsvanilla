@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable indent */
 function encryptText() {
     const text = document.getElementById('textWithoutEncrypt').value;
     const encryptedText = btoa(text);
