@@ -7,21 +7,30 @@ function getInputValue(id) { // Get the value of an input field by id
 }
 
 function processText(text, operation) {
+    const resultElement = document.getElementById('result');
     const processedText = operation === 'encrypt' ? btoa(text) : atob(text);
-    document.getElementById('result').innerHTML = processedText;
+    resultElement.innerHTML = processedText;
+    resultElement.classList.add('result'); // Agrega la clase 'myClass' al elemento resultante
 }
 
-document.getElementById('form').addEventListener('submit', (event) => {
+// Add click event listeners to the encrypt and decrypt buttons
+document.getElementById('encryptButton').addEventListener('click', (event) => {
     event.preventDefault();
     const text = getInputValue('textWithoutEncrypt');
-    processText(text, event.submitter.id === 'encryptButton' ? 'encrypt' : 'decrypt');
+    processText(text, 'encrypt');
+});
+
+document.getElementById('decryptButton').addEventListener('click', (event) => {
+    event.preventDefault();
+    const text = getInputValue('textWithoutEncrypt');
+    processText(text, 'decrypt');
 });
 
 // Function to copy text
 function copyText() {
     const text = document.getElementById('result').innerHTML;
     navigator.clipboard.writeText(text).then(() => {
-        alert('Text copied to clipboard');
+        alert('El texto se ha copiado a tu portapapeles.');
     }).catch((error) => {
         console.error('Error:', error);
     });
