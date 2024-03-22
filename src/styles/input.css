@@ -33,6 +33,19 @@ textarea {
   text-align: center;
   justify-content: space-around;
 }
+@media only screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .encryptArea {
+    width: 83%;
+    height: 350px;
+  }
+  .container .unencryptArea {
+    width: 83%;
+    height: 350px;
+  }
+}
 
 .buttons {
   display: flex;
@@ -56,6 +69,14 @@ textarea {
   font-size: 24px;
   border: none;
   cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .unencryptButton,
+  .encryptButton,
+  .copyButton {
+    width: 165px;
+    height: 48px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .unencryptButton,
@@ -134,13 +155,34 @@ textarea {
   text-wrap: wrap;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media only screen and (max-width: 767px) {
+  .unencryptArea {
+    width: 70%;
+    height: 472px;
+  }
+  .unencryptArea h2 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0%;
+  }
+  .unencryptArea p {
+    padding: 0;
+    margin: 5px;
+    font-size: 16px;
+  }
+}
 .unencryptArea .dummy {
   width: 100%;
   height: auto;
 }
 @media only screen and (max-width: 767px) {
+  .unencryptArea .dummy {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 767px) {
   .unencryptArea {
-    width: 28%;
+    width: 72%;
     height: 472px;
   }
 }
@@ -181,18 +223,39 @@ textarea {
   background-color: #052051;
   color: white;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 12px;
-  padding: 24px, 24px;
+  bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+  .copyButton {
+    bottom: 60px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .copyButton {
+    bottom: 129px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .copyButton {
+    bottom: 20px;
+  }
 }
 
-.result1 {
+.result {
+  margin: 0;
+  top: 50%;
   margin: 0;
   position: absolute;
   top: 50%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  font-size: 32px;
+  color: #0a3871;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
 }
-
-/*# sourceMappingURL=output.css.map */
+@media only screen and (max-width: 767px) {
+  .result {
+    top: 60%;
+  }
+}/*# sourceMappingURL=input.css.map */
