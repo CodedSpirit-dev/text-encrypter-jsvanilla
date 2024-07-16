@@ -6,11 +6,36 @@ function getInputValue(id) { // Get the value of an input field by id
     return document.getElementById(id).value; // Return the value of the input field
 }
 
+function encrypt(text) {
+    let encryptedText = text.replace(/e/g, "enter")
+      .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
+      .replace(/o/g, "ober")
+      .replace(/u/g, "ufat");
+    return encryptedText;
+}
+
+function decrypt(text) {
+    let decryptedText = text.replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+    return decryptedText;
+}
+
 function processText(text, operation) {
     const resultElement = document.getElementById('result');
-    const processedText = operation === 'encrypt' ? btoa(text) : atob(text);
+    let processedText;
+
+    if (operation === 'encrypt') {
+        processedText = encrypt(text);
+    } else {
+        processedText = decrypt(text);
+    }
+
     resultElement.innerHTML = processedText;
-    resultElement.classList.add('result'); // Agrega la clase 'myClass' al elemento resultante
+    resultElement.classList.add('result'); // Agrega la clase 'result' al elemento resultante
 }
 
 // Add click event listeners to the encrypt and decrypt buttons
