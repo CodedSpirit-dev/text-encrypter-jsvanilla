@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f3f5fc;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Inter", sans-serif;
+}
+
+textarea {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #0a3871;
+    background-color: #f3f5fc;
+    border: none;
+    outline: none;
+    border-style: none;
+    width: 100%;
+    height: 705px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .encryptArea {
+        width: 83%;
+        height: 350px;
+    }
+    .container .unencryptArea {
+        width: 83%;
+        height: 350px;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.unencryptButton,
+.encryptButton,
+.copyButton {
+    width: 328px;
+    height: 67px;
+    margin: 12px;
+    padding: 24px, 24px;
+    border-radius: 24px;
+    gap: 8px;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+    .unencryptButton,
+    .encryptButton,
+    .copyButton {
+        width: 165px;
+        height: 48px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .unencryptButton,
+    .encryptButton,
+    .copyButton {
+        width: 190px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .unencryptButton,
+    .encryptButton,
+    .copyButton {
+        width: 250px;
+    }
+}
+
+.encryptArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 72%;
+    height: 1024px;
+    padding: 24px;
+    margin: 12px;
+    border-radius: 24px;
+}
+@media only screen and (max-width: 767px) {
+    .encryptArea {
+        width: 72%;
+        height: 472px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .encryptArea {
+        width: 72%;
+        height: 708px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .encryptArea {
+        width: 72%;
+        height: 826px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .encryptArea {
+        width: 72%;
+        height: 800px;
+    }
+}
+
+.logo {
+    height: 48px;
+    margin: 12px;
+}
+@media only screen and (max-width: 767px) {
+    .logo {
+        width: 180px;
+    }
+}
+
+.unencryptArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 28%;
+    height: 800px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background-color: white;
+    padding: 24px;
+    margin: 12px;
+    overflow: auto;
+    text-wrap: wrap;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media only screen and (max-width: 767px) {
+    .unencryptArea {
+        width: 70%;
+        height: 472px;
+    }
+    .unencryptArea h2 {
+        font-size: 20px;
+        padding: 0;
+        margin: 0%;
+    }
+    .unencryptArea p {
+        padding: 0;
+        margin: 5px;
+        font-size: 16px;
+    }
+}
+.unencryptArea .dummy {
+    width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 767px) {
+    .unencryptArea .dummy {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .unencryptArea {
+        width: 72%;
+        height: 472px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .unencryptArea {
+        width: 28%;
+        height: 708px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .unencryptArea {
+        width: 28%;
+        height: 810px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .unencryptArea {
+        width: 28%;
+        height: 810px;
+    }
+}
+.unencryptArea .p {
+    font-size: 24px;
+    color: #0a3871;
+}
+
+.unencryptButton {
+    background-color: #d8dfe8;
+    color: #052051;
+}
+
+.encryptButton {
+    background-color: #052051;
+    color: white;
+}
+
+.copyButton {
+    background-color: #052051;
+    color: white;
+    position: absolute;
+    bottom: 40px;
+}
+@media only screen and (max-width: 767px) {
+    .copyButton {
+        bottom: 60px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .copyButton {
+        bottom: 129px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .copyButton {
+        bottom: 20px;
+    }
+}
+
+.result {
+    margin: 0;
+    top: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: #0a3871;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .result {
+        top: 60%;
+    }
+}
+
+
+/*# sourceMappingURL=/final.6a66c767.css.map */
